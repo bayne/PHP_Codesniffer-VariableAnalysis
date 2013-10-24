@@ -172,8 +172,8 @@ class Generic_Tests_CodeAnalysis_VariableAnalysisUnitTest extends AbstractSniffU
                 //  ClassWithThisInsideClosure->method_with_this_inside_closure() line (+16)
                 ($base += 16) => 0,
                 ($base + 3)   => 1,  //  $inner_param
-                ($base + 4)   => 1,  //  $this
-                ($base + 5)   => 1,  //  $this
+                ($base + 4)   => 0,  //  $this
+                ($base + 5)   => 0,  //  $this
                 //  ClassWithSelfInsideClosure->method_with_self_inside_closure() line (+15)
                 ($base += 15) => 0,
                 ($base + 3)   => array(0, 1),  //  $self::$static_member
